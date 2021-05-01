@@ -7,17 +7,21 @@ module.exports = (client) => {
     const target = process.env.BAS_ID;
     let found = false;
 
-    let members = message.channel.members;
-    members.forEach((member) => {
-      if (member.id === target) {
-        member.voice.setMute(false);
-        found = true;
+    if (member.id !== target) {
+      let members = message.channel.members;
+      members.forEach((member) => {
+        if (member.id === target) {
+          member.voice.setMute(false);
+          found = true;
+        }
+      });
+      if (!found) {
+        message.channel.send(red("Basil is not in the chat"));
+      } else {
+        message.channel.send(green("Successfully unmuted basil"));
       }
-    });
-    if (!found) {
-      message.channel.send(red("Basil is not in the chat"));
     } else {
-      message.channel.send(green("Successfully unmuted basil"));
+      message.channel.send(red("lol basil is not allowed to unmute himself"));
     }
   });
 };
