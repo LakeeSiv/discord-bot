@@ -1,4 +1,5 @@
 const command = require("../command");
+const { green, red } = require("../colors");
 
 module.exports = (client) => {
   command(client, "mute-basil", (message) => {
@@ -8,7 +9,6 @@ module.exports = (client) => {
     let found = false;
 
     if (allowed_users.includes(member.id)) {
-      message.channel.send(process.env.BAS_MUTE_MESSAGE);
       let members = message.channel.members;
       members.forEach((member) => {
         if (member.id === target) {
@@ -17,10 +17,16 @@ module.exports = (client) => {
         }
       });
       if (!found) {
-        message.channel.send("Basil was not found");
+        message.channel.send(red("Basil was not found"));
+      } else {
+        message.channel.send(green(process.env.BAS_MUTE_MESSAGE));
       }
     } else {
-      console.log("you do not have permisson to do that");
+      message.channel.send(
+        red(
+          "you do not have permisson to do that\n Only Lakee and Harley have permissions to do this command"
+        )
+      );
     }
   });
 };
