@@ -3,6 +3,7 @@ const command = require("../command");
 const text =
   "```\n\
 !help         : brings up this help message\n\n\
+!github       : returns an embeded link to the github repo\n\n\
 !mute-basil   : this command will server mute basil\n\
                     permissions: Lakee, Harley\n\n\
 !unmute-basil : unmutes basil from a server mute\n\
