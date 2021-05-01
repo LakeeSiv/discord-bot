@@ -1,9 +1,10 @@
 const command = require("../command");
+const {green} = require("../colors")
 
 module.exports = (client) => {
   command(client, "unmute-basil", (message) => {
     const { member } = message;
-    const target = process.env.BAS_ID;
+    const target = process.env.LAKEE_ID;
     const allowed_users = [process.env.LAKEE_ID, process.env.HAR_ID];
     let found = false;
 
@@ -16,8 +17,9 @@ module.exports = (client) => {
       });
       if (!found) {
         message.channel.send("`Basil is not in the chat`");
-      }else{
-        message.channel.send("`Un-muted basil`");  
+      }else{ 
+        // message.channel.send("```diff\n+ Successfully unmuted basil\n```");
+        message.channel.send(green("Successfully unmuted basil"));    
       }
 
   });
