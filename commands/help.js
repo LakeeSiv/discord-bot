@@ -5,7 +5,7 @@ const text =
 !help           : brings up this help message\n\n\
 !github         : returns an embeded link to the github repo\n\n\
 !mcname <@name> : tag someone on discord with this command to find their IGN\n\
-                    permissions: Lakee, Harley\n\n\
+                    permissions: Everyone\n\n\
 !mute-basil     : this command will server mute basil\n\
                     permissions: Lakee, Harley\n\n\
 !unmute-basil   : unmutes basil from a server mute\n\
