@@ -6,7 +6,7 @@ const text =
 !mute-basil   : this command will server mute basil\n\
                     permissions: Lakee, Harley\n\n\
 !unmute-basil : unmutes basil from a server mute\n\
-                    permissions: Everyone\n\n\n\n\
+                    permissions: Everyone but basil\n\n\n\n\
 --------------------------------------------------\n\
 MINECRAFT BOT BY LAKEE SIVARAYA\n\
 github: https://github.com/LakeeSiv/discordMCBot\n\
