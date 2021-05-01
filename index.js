@@ -7,7 +7,13 @@ client.on("ready", () => {
   console.log("Logged in");
 
   command(client, "mutebasil", (message) => {
-    message.channel.send(process.env.BAS_MUTE_MESSAGE);
+    const { member } = message;
+
+    if (member.id === process.env.LAKEE_ID) {
+      message.channel.send(process.env.BAS_MUTE_MESSAGE);
+    } else {
+      console.log("you do not have permisson to do that");
+    }
   });
 });
 
