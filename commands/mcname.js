@@ -11,8 +11,8 @@ module.exports = (client) => {
     const splitContent = content.trim().split(" ");
     const mentionID = splitContent[1].slice(0, -1).substring(3);
     const discordName = mentions.users.first().username;
-    const IGN = usernames[mentionID]
+    const IGN = usernames[mentionID];
 
-    channel.send(code(`@${discordName}'s IGN is ${IGN}`))
+    channel.send(code(`@${discordName}'s IGN is ${IGN}`));
   });
 };
