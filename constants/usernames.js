@@ -5,4 +5,5 @@ module.exports= {
     [process.env.PHIL_ID] : "_NetflixAndPhil_",
     [process.env.JOE_ID ]: "Joseph2703",
     [process.env.DAN_ID ]: "lostmyallowance",
+    [process.env.TEST_ID ]: "test",
 };
