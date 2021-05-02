@@ -33,6 +33,11 @@ FINAL_KILLS: ${finalKills}\n\
 DEATHS: ${deaths}\n\
 FINAL_DEATHS: ${finalDeaths}\n\
 KD_RATIO: ${KDRatio}\n\
+BEDS: ${JSON.stringify(beds,null, 2)}\n\
+SOLOS: ${JSON.stringify(solo,null, 2)}\n\
+DOUBLES: ${JSON.stringify(doubles,null, 2)}\n\
+THREES: ${JSON.stringify(threes,null, 2)}\n\
+FOURS: ${JSON.stringify(fours,null, 2)}\n\
 \
 \
 `;
