@@ -1,7 +1,7 @@
 const getData = require("./getData")
 const command = require("../../command");
 const { red } = require("../../colors");
-
+const {user} = require("./boiler")
 
 module.exports = async (client) => {
     command(client, "stats", async (message) => {
@@ -14,11 +14,12 @@ module.exports = async (client) => {
 
     if (!(data)) {
       channel.send(red("Error player not found"))
+      return
     }
     var text = "Game option not found"
     switch (option){
     case "user":
-      channel.send(data.level, splitContent[1]);
+      channel.send(user(data));
       break;
     }
   });
