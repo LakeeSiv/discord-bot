@@ -1,6 +1,6 @@
 const user = require("./user");
 
-const commands = {
+const boilers = {
   user,
 };
 
