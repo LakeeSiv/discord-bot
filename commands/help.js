@@ -17,9 +17,10 @@ const text =
 -------------------------------------------------------------------------------------------------\n\
 !stats <options> <IGN> : returns stats for the player depending on options\n\n\
      options available : \n\
-                        user: gives general info about users\n\
-                        bw  : bedwars stats\n\
-\n\n\n\n\
+                        user         : gives general info about users\n\
+                        bw           : few bedwars stats\n\
+                        bw-detailed  : detailed bedwars stats\n\
+\n\n\
 -------------------------------------------------------------------------------------------------\n\
 MINECRAFT BOT BY LAKEE SIVARAYA\n\
 github: https://github.com/LakeeSiv/discordMCBot\n\
