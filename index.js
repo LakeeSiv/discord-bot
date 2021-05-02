@@ -7,7 +7,6 @@ const unmute = require("./commands/unmute");
 const help = require("./commands/help");
 const github = require("./commands/github");
 const mcname = require("./commands/mcname");
-// const mcname = require("./constants/mcname")
 
 
 client.on("ready", () => {
