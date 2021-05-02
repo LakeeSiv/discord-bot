@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const command = require("./command");
 
 const { mute, unmute, help, github, mcname } = require("./commands");
+const userStats = require("./commands/hypixelAPI/stats")
 
 client.on("ready", () => {
   console.log("Logged in");
@@ -13,6 +14,7 @@ client.on("ready", () => {
   help(client);
   github(client);
   mcname(client);
+  userStats(client);
 });
 
 client.login(process.env.TOKEN);
