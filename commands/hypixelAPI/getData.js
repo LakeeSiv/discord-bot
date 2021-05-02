@@ -8,5 +8,6 @@ module.exports = async (username) =>{
     }
     catch (err) {
         console.log(err);
+        return false
     }
 };
