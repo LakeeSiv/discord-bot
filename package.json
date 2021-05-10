@@ -7,6 +7,7 @@
     "start": "node index.js",
     "api": "node commands/hypixelAPI/getData.js"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
