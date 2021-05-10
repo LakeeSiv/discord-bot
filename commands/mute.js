@@ -1,11 +1,14 @@
+// to make sure this mute command works make sure to
+// assgin the bot a role which has permissions to mute and deafen users
+
 const command = require("../command");
 const { green, red } = require("../colors");
 
 module.exports = (client) => {
   command(client, "mute-basil", (message) => {
     const { member } = message;
-    // const target = process.env.BAS_ID;
     const target = process.env.BAS_ID;
+    // const target = process.env.LAKEE_ID;
     const allowed_users = [
       process.env.LAKEE_ID,
       process.env.HAR_ID,
