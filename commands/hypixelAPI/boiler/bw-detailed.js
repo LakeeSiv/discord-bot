@@ -1,4 +1,5 @@
 const { code } = require("../../../colors");
+const json2string = require("../json2string");
 
 module.exports = (data) => {
   const { nickname } = data;
@@ -33,11 +34,11 @@ FINAL_KILLS: ${finalKills}\n\
 DEATHS: ${deaths}\n\
 FINAL_DEATHS: ${finalDeaths}\n\
 KD_RATIO: ${KDRatio}\n\
-BEDS: ${JSON.stringify(beds,null, 2)}\n\
-SOLOS: ${JSON.stringify(solo,null, 2)}\n\
-DOUBLES: ${JSON.stringify(doubles,null, 2)}\n\
-THREES: ${JSON.stringify(threes,null, 2)}\n\
-FOURS: ${JSON.stringify(fours,null, 2)}\n\
+BEDS: ${json2string(beds)}\n\
+SOLOS: ${json2string(solo)}\n\
+DOUBLES: ${json2string(doubles)}\n\
+THREES: ${json2string(threes)}\n\
+FOURS: ${json2string(fours)}\n\
 \
 \
 `;
