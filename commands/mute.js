@@ -4,8 +4,13 @@ const { green, red } = require("../colors");
 module.exports = (client) => {
   command(client, "mute-basil", (message) => {
     const { member } = message;
+    // const target = process.env.BAS_ID;
     const target = process.env.BAS_ID;
-    const allowed_users = [process.env.LAKEE_ID, process.env.HAR_ID];
+    const allowed_users = [
+      process.env.LAKEE_ID,
+      process.env.HAR_ID,
+      process.env.TEST_ID,
+    ];
     let found = false;
 
     if (allowed_users.includes(member.id)) {

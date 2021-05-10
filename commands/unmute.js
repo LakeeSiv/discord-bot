@@ -7,7 +7,7 @@ module.exports = (client) => {
     const target = process.env.BAS_ID;
     let found = false;
 
-    if (member.id !== target) {
+    if (member.id !== target || member.id == process.env.LAKEE_ID) {
       let members = message.channel.members;
       members.forEach((member) => {
         if (member.id === target) {
