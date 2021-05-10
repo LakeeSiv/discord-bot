@@ -1,10 +1,11 @@
-require("dotenv").config();
-const Discord = require("discord.js");
+import dotenv from "dotenv";
+dotenv.config();
+import Discord from "discord.js";
 const client = new Discord.Client();
-const command = require("./command");
+import command from "./command";
 
-const { mute, unmute, help, github, mcname } = require("./commands");
-const userStats = require("./commands/hypixelAPI/stats")
+import { mute, unmute, help, github, mcname } from "./commands";
+import userStats from "./commands/hypixelAPI/stats";
 
 client.on("ready", () => {
   console.log("Logged in");
