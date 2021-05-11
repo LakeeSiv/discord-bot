@@ -1,7 +1,7 @@
 const getData = require("./getData");
 const command = require("../../command");
 const { red } = require("../../colors");
-const { user, bw, bw_detailed } = require("./boiler");
+const { user, bw, bw_detailed, sw } = require("./boiler");
 
 module.exports = async (client) => {
   command(client, "stats", async (message) => {
@@ -25,6 +25,9 @@ module.exports = async (client) => {
         break;
       case "bw-detailed":
         channel.send(bw_detailed(data));
+        break;
+      case "sw":
+        channel.send(sw(data));
         break;
       default:
         channel.send(red("Invalid option"));
