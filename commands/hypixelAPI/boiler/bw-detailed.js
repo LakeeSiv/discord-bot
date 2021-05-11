@@ -22,10 +22,10 @@ module.exports = (data) => {
     fours,
   } = data.stats.bedwars;
 
+  const dashes = "-".repeat(nickname.length);
   const text = `\n\
--------------------------------------------------------------------------------------------------\n\
-                               BEDWARS STATS FOR : ${nickname}            
--------------------------------------------------------------------------------------------------\n\
+BEDWARS STATS FOR : ${nickname}\            
+--------------------${dashes}\n\
 LEVEL: ${level}\n\
 PLAYED_GAMES: ${playedGames}\n\
 WINS/LOSSES: ${wins}/${losses} = ${WLRatio} \n\
