@@ -12,13 +12,7 @@ module.exports = (data) => {
     finalKills,
     deaths,
     finalDeaths,
-    beds,
     KDRatio,
-    avg,
-    solo,
-    doubles,
-    threes,
-    fours,
   } = data.stats.bedwars;
 
   const dashes = "-".repeat(nickname.length);
