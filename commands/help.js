@@ -22,6 +22,9 @@ const text =
                     user         : gives general info about users\n\
                     bw           : few bedwars stats\n\
                     bw-detailed  : detailed bedwars stats\n\
+                    sw           : few skywars stats\n\
+                    sw-detailed  : detailed skywars stats\n\
+\
 \n\n\
 \n\
 MINECRAFT BOT BY LAKEE SIVARAYA\n\
