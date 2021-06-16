@@ -5,4 +5,7 @@
 // const mcname = require("./mcname");
 
 import help from "./help";
-export { help };
+import github from "./github";
+import mute from "./mute";
+import unmute from "./unmute";
+export { help, github, mute, unmute };
