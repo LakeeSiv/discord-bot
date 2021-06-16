@@ -1,6 +1,7 @@
 import { config } from "dotenv";
 config();
 import Discord from "discord.js";
+import { help } from "./commands";
 
 const client: Discord.Client = new Discord.Client();
 // require("dotenv").config();
@@ -16,7 +17,7 @@ client.on("ready", () => {
 
   // mute(client);
   // unmute(client);
-  // help(client);
+  help(client);
   // github(client);
   // mcname(client);
   // userStats(client);
