@@ -2,15 +2,9 @@ import { config } from "dotenv";
 config();
 import Discord from "discord.js";
 import { help, github, mute, unmute } from "./commands";
+import stats from "./hypixel_api/stats";
 
 const client: Discord.Client = new Discord.Client();
-// require("dotenv").config();
-// const Discord = require("discord.js");
-// const client = new Discord.Client();
-// const command = require("./command");
-
-// const { mute, unmute, help, github, mcname } = require("./commands");
-// const userStats = require("./commands/hypixelAPI/stats")
 
 client.on("ready", () => {
   console.log("Logged in");
@@ -18,9 +12,8 @@ client.on("ready", () => {
   mute(client);
   unmute(client);
   help(client);
-  // github(client);
-  // mcname(client);
-  // userStats(client);
+  github(client);
+  stats(client);
 });
 
 client.login(process.env.TOKEN);
