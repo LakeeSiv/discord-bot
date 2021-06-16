@@ -1,6 +1,8 @@
-const { code } = require("../../../colors");
+import { Player } from "hypixel-api-reborn";
+import { code } from "../../helpers/colors";
+import json2string from "../json2string";
 
-module.exports = (data) => {
+const bw_detailed = (data: Player) => {
   const { nickname } = data;
   const {
     level,
@@ -12,8 +14,14 @@ module.exports = (data) => {
     finalKills,
     deaths,
     finalDeaths,
+    beds,
     KDRatio,
-  } = data.stats.bedwars;
+    avg,
+    solo,
+    doubles,
+    threes,
+    fours,
+  } = data!.stats!.bedwars!;
 
   const dashes = "-".repeat(nickname.length);
   const text = `\n\
@@ -27,8 +35,15 @@ FINAL_KILLS: ${finalKills}\n\
 DEATHS: ${deaths}\n\
 FINAL_DEATHS: ${finalDeaths}\n\
 KD_RATIO: ${KDRatio}\n\
+BEDS: ${json2string(beds)}\n\
+SOLOS: ${json2string(solo)}\n\
+DOUBLES: ${json2string(doubles)}\n\
+THREES: ${json2string(threes)}\n\
+FOURS: ${json2string(fours)}\n\
 \
 \
 `;
   return code(text);
 };
+
+export default bw_detailed;
