@@ -18,7 +18,7 @@ const carousel_basil = (client: Client) => {
     const channelMembers = (message.channel as TextChannel).members;
 
     channelMembers!.forEach((member) => {
-      if (member.id === mentionID) {
+      if (member.id === target) {
         targetMemember = member;
       }
     });
