@@ -8,7 +8,7 @@ const text: string =
 !github                : returns an embeded link to the github repo\n\n\
 \n\
 !mute-basil            : this command will server mute basil\n\n\
-                           permissions: Lakee, Harley\n\n\
+                           permissions: Lakee, Harley, Dan\n\n\
 \n\
 !unmute-basil          : unmutes basil from a server mute\n\n\
                            permissions: Everyone but basil\n\n\
@@ -17,7 +17,7 @@ const text: string =
                            permissions: Everyone\n\n\
 \n\
 !carousel <@tag> <delay (s)> <cycles>\n\n\
-                      : puts basil into a carousel with variables\n\n\
+                      : puts the tagged person into a carousel with variables\n\n\
                            permissions: Lakee\n\n\
 \n\
 !stats <options> <IGN> : returns stats for the player depending on\n\
