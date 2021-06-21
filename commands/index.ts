@@ -8,4 +8,5 @@ import help from "./help";
 import github from "./github";
 import mute from "./mute";
 import unmute from "./unmute";
-export { help, github, mute, unmute };
+import carousel from "./carousel";
+export { help, github, mute, unmute, carousel };
