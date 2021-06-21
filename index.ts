@@ -1,7 +1,7 @@
 import { config } from "dotenv";
 config();
 import Discord from "discord.js";
-import { help, github, mute, unmute } from "./commands";
+import { help, github, mute, unmute, carousel } from "./commands";
 import stats from "./hypixel_api/stats";
 
 const client: Discord.Client = new Discord.Client();
@@ -14,6 +14,7 @@ client.on("ready", () => {
   help(client);
   github(client);
   stats(client);
+  carousel(client);
 });
 
 client.login(process.env.TOKEN);
