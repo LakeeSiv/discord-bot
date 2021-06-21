@@ -20,14 +20,21 @@ const carousel = (client: Client) => {
     const loops: number = parseInt(splitContent[3]);
 
     let targetMemember: null | GuildMember = null;
+    let targetChannel: null | string = null;
 
     const channelMembers = (message.channel as TextChannel).members;
 
     channelMembers!.forEach((member) => {
       if (member.id === mentionID) {
         targetMemember = member;
+        try {
+          targetChannel = member.voice.channel!.id;
+        } catch (error) {
+          message.channel.send(red("error person not found"));
+        }
       }
     });
+
     const channels: (string | null)[] = [];
 
     const ChannelManager: GuildChannelManager = message.guild
@@ -46,6 +53,7 @@ const carousel = (client: Client) => {
           await sleep(delay * 1000);
         }
       }
+      targetMemember!.voice.setChannel(targetChannel);
       message.channel.send(green("Carousel Finished"));
     } else {
       message.channel.send(red("You do not have permission to do that"));
