@@ -14,9 +14,9 @@ const text: string =
                            permissions: Everyone but basil\n\n\
 \n\
 !carousel-basil        : puts basil into a carousel\n\n\
-                           permissions: Everyone but basil\n\n\
+                           permissions: Everyone\n\n\
 \n\
-!carousel-basil <@tag> <delay (s)> <cycles>\n\n\
+!carousel <@tag> <delay (s)> <cycles>\n\n\
                       : puts basil into a carousel with variables\n\n\
                            permissions: Lakee\n\n\
 \n\
