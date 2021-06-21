@@ -5,22 +5,26 @@ import {
   GuildChannel,
   GuildChannelManager,
   GuildMember,
+  TeamMember,
   TextChannel,
 } from "discord.js";
 import sleep from "../helpers/sleep";
 
 const carousel = (client: Client) => {
   command(client, "carousel", async (message) => {
-    const { member } = <{ member: GuildMember }>message;
-    // const target: string = process.env.TEST_ID as string;
-    // const target: string = process.env.BAS_ID as string;
-    const target: string = process.env.LAKEE_ID as string;
+    const { content, mentions, member } = message;
+
+    const splitContent: string[] = content.trim().split(" ");
+    const mentionID: string = splitContent[1].slice(0, -1).substring(3);
+    const delay: number = parseFloat(splitContent[2]);
+    const loops: number = parseInt(splitContent[3]);
+
     let targetMemember: null | GuildMember = null;
 
     const channelMembers = (message.channel as TextChannel).members;
 
     channelMembers!.forEach((member) => {
-      if (member.id === target) {
+      if (member.id === mentionID) {
         targetMemember = member;
       }
     });
@@ -35,11 +39,16 @@ const carousel = (client: Client) => {
       }
     });
 
-    for (let i = 0; i < 3; i++) {
-      for (let channel of channels) {
-        targetMemember!.voice.setChannel(channel);
-        await sleep(1000);
+    if (member!.id === process.env.LAKEE_ID) {
+      for (let i = 0; i < loops; i++) {
+        for (let channel of channels) {
+          targetMemember!.voice.setChannel(channel);
+          await sleep(delay * 1000);
+        }
       }
+      message.channel.send(green("Carousel Finished"));
+    } else {
+      message.channel.send(red("You do not have permission to do that"));
     }
   });
 };
