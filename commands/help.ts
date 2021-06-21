@@ -13,6 +13,13 @@ const text: string =
 !unmute-basil          : unmutes basil from a server mute\n\n\
                            permissions: Everyone but basil\n\n\
 \n\
+!carousel-basil        : puts basil into a carousel\n\n\
+                           permissions: Everyone but basil\n\n\
+\n\
+!carousel-basil <@tag> <delay (s)> <cycles>\n\n\
+                      : puts basil into a carousel with variables\n\n\
+                           permissions: Lakee\n\n\
+\n\
 !stats <options> <IGN> : returns stats for the player depending on\n\
                          options\n\n\
      options available : \n\
