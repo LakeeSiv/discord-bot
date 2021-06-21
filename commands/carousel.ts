@@ -12,7 +12,7 @@ const carousel = (client: Client) => {
   command(client, "carousel", (message) => {
     const { member } = <{ member: GuildMember }>message;
     //     const target: string = process.env.BAS_ID as string;
-    const target = process.env.LAKEE_ID;
+    const target: string = process.env.LAKEE_ID as string;
     const channels: (string | null)[] = [];
 
     const ChannelManager: GuildChannelManager = message.guild
@@ -23,6 +23,13 @@ const carousel = (client: Client) => {
         channels.push(c.id);
       }
     });
+
+    for (let i = 0; i < 3; i++) {
+      for (let channel of channels) {
+        member.voice.setChannel(channel);
+        sleep(10000);
+      }
+    }
 
     console.log(channels);
   });
