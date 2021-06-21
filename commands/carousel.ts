@@ -7,12 +7,23 @@ import {
   GuildMember,
   TextChannel,
 } from "discord.js";
+import sleep from "../helpers/sleep";
 
 const carousel = (client: Client) => {
-  command(client, "carousel", (message) => {
+  command(client, "carousel", async (message) => {
     const { member } = <{ member: GuildMember }>message;
-    //     const target: string = process.env.BAS_ID as string;
+    // const target: string = process.env.TEST_ID as string;
+    // const target: string = process.env.BAS_ID as string;
     const target: string = process.env.LAKEE_ID as string;
+    let targetMemember: null | GuildMember = null;
+
+    const channelMembers = (message.channel as TextChannel).members;
+
+    channelMembers!.forEach((member) => {
+      if (member.id === target) {
+        targetMemember = member;
+      }
+    });
     const channels: (string | null)[] = [];
 
     const ChannelManager: GuildChannelManager = message.guild
@@ -26,12 +37,10 @@ const carousel = (client: Client) => {
 
     for (let i = 0; i < 3; i++) {
       for (let channel of channels) {
-        member.voice.setChannel(channel);
-        sleep(10000);
+        targetMemember!.voice.setChannel(channel);
+        await sleep(1000);
       }
     }
-
-    console.log(channels);
   });
 };
 
