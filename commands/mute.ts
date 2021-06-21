@@ -13,6 +13,7 @@ const mute = (client: Client) => {
       process.env.LAKEE_ID,
       process.env.HAR_ID,
       process.env.TEST_ID,
+      process.env.DAN_ID,
     ];
     let found: boolean = false;
 
