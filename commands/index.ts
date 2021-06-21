@@ -9,4 +9,5 @@ import github from "./github";
 import mute from "./mute";
 import unmute from "./unmute";
 import carousel from "./carousel";
-export { help, github, mute, unmute, carousel };
+import carousel_basil from "./carousel-basil";
+export { help, github, mute, unmute, carousel, carousel_basil };
