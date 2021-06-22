@@ -53,7 +53,7 @@ const carousel = (client: Client) => {
           await sleep(delay * 1000);
         }
       }
-      targetMemember!.voice.setChannel(targetChannel);
+      await targetMemember!.voice.setChannel(targetChannel);
       message.channel.send(green("Carousel Finished"));
     } else {
       message.channel.send(red("You do not have permission to do that"));
