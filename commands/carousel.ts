@@ -49,7 +49,7 @@ const carousel = (client: Client) => {
     if (member!.id === process.env.LAKEE_ID) {
       for (let i = 0; i < loops; i++) {
         for (let channel of channels) {
-          targetMemember!.voice.setChannel(channel);
+          await targetMemember!.voice.setChannel(channel);
           await sleep(delay * 1000);
         }
       }

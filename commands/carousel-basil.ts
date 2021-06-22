@@ -35,7 +35,7 @@ const carousel_basil = (client: Client) => {
 
     for (let i = 1; i < 5; i++) {
       for (let channel of channels) {
-        targetMemember!.voice.setChannel(channel);
+        await targetMemember!.voice.setChannel(channel);
         await sleep(600);
       }
     }
